@@ -1,107 +1,38 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SIMARSIP SMKNJ</title>
-
-  <!--
-    ====================================================================
-    CARA PAKAI FILE INI (baca sebelum upload ke GitHub):
-
-    1. Cari URL Web App Apps Script Anda:
-       - Buka project Apps Script SIMARSIP Anda di script.google.com
-       - Klik "Deploy" -> "Manage deployments"
-       - Salin URL yang muncul di sana (harus diakhiri dengan  /exec )
-
-    2. Ganti tulisan  GANTI_DENGAN_URL_WEB_APP_ANDA  di BAWAH INI
-       (ada 2 tempat: satu di bagian <script>, satu lagi di bagian <a href>)
-       dengan URL yang Anda salin tadi.
-
-    3. Upload file ini dengan nama index.html ke repository GitHub Anda,
-       lalu aktifkan GitHub Pages (Settings -> Pages -> Branch: main -> Save).
-    ====================================================================
-  -->
-
-  <meta http-equiv="refresh" content="0; url=GANTI_DENGAN_URL_WEB_APP_ANDA">
-
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6d/Logo_fbkk.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" />
   <style>
-    :root{
-      --navy-950: #0a2559;
-      --navy-900: #0f3480;
-      --stamp: #2563eb;
-      --stamp-dark: #1e40af;
-      --paper: #f5f8fc;
-      --ink: #16233d;
-      --ink-muted: #7c8aa5;
-      --line: #d7e3f5;
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
     }
-    *{ box-sizing:border-box; margin:0; padding:0; }
-    html, body{
-      height:100%;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(37,99,235,.18), transparent 40%),
-        radial-gradient(circle at 85% 80%, rgba(15,52,128,.35), transparent 45%),
-        var(--navy-950);
+    .iframe-container {
+      width: 100%;
+      height: 100vh;
     }
-    .wrap{
-      min-height:100vh;
-      display:flex; align-items:center; justify-content:center;
-      padding:24px;
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
-    .card{
-      width:100%; max-width:420px;
-      background:#ffffff;
-      border-radius:18px;
-      padding:40px 34px 34px;
-      text-align:center;
-      box-shadow: 0 30px 70px rgba(10,37,89,.30);
-    }
-    .seal{
-      width:60px; height:60px; margin:0 auto 18px;
-      border-radius:50%;
-      background: linear-gradient(155deg, var(--stamp), var(--stamp-dark));
-      color:#fff; display:flex; align-items:center; justify-content:center;
-      font-weight:700; font-size:20px; letter-spacing:.5px;
-      box-shadow: 0 0 0 4px #dbeafe, 0 10px 22px rgba(37,99,235,.35);
-    }
-    h1{ font-size:19px; color: var(--navy-950); margin-bottom:8px; }
-    p{ font-size:13px; color: var(--ink-muted); line-height:1.6; }
-    .spinner{
-      width:26px; height:26px; margin:22px auto 20px;
-      border-radius:50%;
-      border:3px solid var(--line);
-      border-top-color: var(--stamp);
-      animation: spin .8s linear infinite;
-    }
-    @keyframes spin{ to{ transform: rotate(360deg); } }
-    a.manual-link{
-      display:inline-block; margin-top:18px;
-      padding:11px 20px;
-      background: linear-gradient(155deg, var(--stamp), var(--stamp-dark));
-      color:#fff; text-decoration:none;
-      border-radius:8px; font-size:13px; font-weight:700;
-    }
-    .footer{ margin-top:22px; font-size:11px; color: rgba(255,255,255,.6); }
   </style>
-
-  <script>
-    // Ganti tulisan di bawah ini dengan URL Web App Apps Script Anda sendiri
-    // (harus diakhiri dengan /exec). Baris ini yang melakukan pengalihan otomatis.
-    window.location.href = "https://script.google.com/macros/s/AKfycby6lfPNC7zWYufiFYz_GiHLad76hiokh0-0Uq4vVL3UHQ4esCS6U0rpdamDAcGl0F2a/exec";
-  </script>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <div class="seal">SN</div>
-      <h1>SIMARSIP SMKNJ</h1>
-      <div class="spinner"></div>
-      <p>Sedang mengalihkan ke aplikasi&hellip;<br>Mohon tunggu sebentar.</p>
-      <a class="manual-link" href="GANTI_DENGAN_URL_WEB_APP_ANDA">Klik di sini jika tidak otomatis</a>
-    </div>
+  <div class="iframe-container">
+    <iframe
+      id="app"
+      src="https://script.google.com/macros/s/AKfycby6lfPNC7zWYufiFYz_GiHLad76hiokh0-0Uq4vVL3UHQ4esCS6U0rpdamDAcGl0F2a/exec"
+      scrolling="yes"
+      allowfullscreen="true"
+      webkitallowfullscreen="true">
+    </iframe>
   </div>
-  <div class="footer">SIMARSIP &middot; SMK Nurul Jadid</div>
 </body>
 </html>
